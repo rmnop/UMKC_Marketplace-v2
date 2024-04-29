@@ -42,7 +42,7 @@ const Order = () => {
       <div className="order-list">
         {orders.map((order, index) => (
           <div key={index} className='order-item'>
-            <img src={assets.parcel_icon} alt="" />
+            <img src={assets.order_icon} alt="" />
             <div>
               <p className='order-item-market'>
                 {order.items.map((item, index) => {
@@ -54,12 +54,12 @@ const Order = () => {
                   }
                 })}
                 </p>
-              <p className='order-item-phone'>{order.address.phone}</p>
+              <p className='order-item-phone'>{order.phone}</p>
             </div>
             <p>Items : {order.items.length}</p>
             <p>${order.amount}</p>
             <select onChange={(e)=>statusHandler(e,order._id)} value={order.status} name="" id="">
-              <option value="Item Processing">Food Processing</option>
+              <option value="Item Processing">Item Processing</option>
             </select>
           </div>
         ))}

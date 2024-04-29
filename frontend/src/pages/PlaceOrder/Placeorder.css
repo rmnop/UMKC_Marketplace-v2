@@ -3,7 +3,7 @@
     align-items: start;
     justify-content: space-between;
     gap: 50px;
-    margin: 100px 0px;
+    margin: 100px 100px 0px 50px;
 }
 .place-order-left{
     width: 100%;
@@ -20,7 +20,7 @@
     padding: 10px;
     border: 1px solid #C5C5C5;
     border-radius: 4px;
-    outline-color: tomato;
+    outline-color: #0066cc;
 }
 .place-order-left .multi-field{
     display: flex;
@@ -33,15 +33,9 @@
 .place-order-submit{
     margin-top: 50px;
     border: none;
-    background-color: tomato;
+    background-color: #0066CC;
     color: white;
     padding: 12px 30px;
     border-radius: 4px;
     cursor: pointer;
-}
-
-@media (max-width:700px) {
-    .place-order{
-        flex-direction: column;
-    }
 }
