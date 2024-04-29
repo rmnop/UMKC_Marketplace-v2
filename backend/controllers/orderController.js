@@ -25,17 +25,6 @@ const placeOrder = async (req, res) => {
             },
             quantity: item.quantity
           }))
-
-        line_items.push({
-            price_data:{
-                currency:"USD",
-                product_data:{
-                    name:"Delivery Charge"
-                },
-                unit_amount: 1
-            },
-            quantity:1
-        })
         
           const session = await stripe.checkout.sessions.create({
             success_url: `http://localhost:5173/verify?success=true&orderId=${newOrder._id}`,
