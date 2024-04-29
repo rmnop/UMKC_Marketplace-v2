@@ -5,13 +5,13 @@ import MarketItem from '../MarketItem/MarketItem'
 
 const ItemDisplay = ({category}) => {
 
-    const {food_list} = useContext(MarketContext);
+    const {item_list} = useContext(MarketContext);
 
   return (
     <div className='market-display' id='market-display'>
       <h2>Top Items Near You</h2>
       <div className="market-display-list">
-        {food_list.map((item) => {
+        {item_list.map((item) => {
             if(category === "All" || category === item.category) {
               return <MarketItem key={item._id} image={item.image} name={item.name} desc={item.description} price={item.price} id={item._id}/>
             }
