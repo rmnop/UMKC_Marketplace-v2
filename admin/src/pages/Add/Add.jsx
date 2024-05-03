@@ -30,7 +30,7 @@ const Add = () => {
                 name: "",
                 description: "",
                 price: "",
-                category: "Salad"
+                category: ""
             })
             setImage(false);
         }
